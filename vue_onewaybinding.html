@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Learn vue</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container" id="app">
+      <h1 v-bind:title="title">{{message}}</h1>
+      <img :src="url" v-bind:alt="alt" v-bind:title="title" width="500">
+    </div>
+  </body>
+  <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+  <script type="text/javascript">
+    var app = new Vue({
+      el: "#app",
+      data: {
+        message: "Hello world",
+        title: "Do you see me on " + new Date() + " ?",
+        url: "https://vignette.wikia.nocookie.net/gtawiki/images/9/9a/PlayStation_1_Logo.png/revision/latest?cb=20100130082645",
+        alt: "Error image"
+      }
+    })
+  </script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Learn vue</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container" id="app">
+      <h1>{{message}}</h1>
+      <p v-text="message"></p>
+      <hr>
+
+      <h1 v-html="message2"></h1>
+      <hr>
+
+      <p v-show="message3">{{message}}</p>
+      <hr>
+
+      <p v-if="message3 == message4">Catch me!</p>
+      <p v-else>Don't catch me!</p>
+      <hr>
+
+      <p v-once>{{message}}</p>
+    </div>
+  </body>
+  <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Learning vue',
+        message2: "Text with <small>tag</small>",
+        message3: true,
+        message4: false
+      }
+    })
+  </script>
+</html>
